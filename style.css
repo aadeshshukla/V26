@@ -105,7 +105,6 @@ body {
 /* Main Card */
 .card {
     background: linear-gradient(135deg, #fff9fb 0%, #ffe4f0 50%, #ffd9e8 100%);
-    background-image: url();
     border-radius: 30px;
     padding: 50px;
     max-width: 600px;
@@ -200,7 +199,7 @@ body {
 .name-title {
     font-size: 2.5rem;
     color: #d81b60;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 40px 0;
     font-weight: 700;
     animation: nameSlideIn 0.8s ease-out 0.2s both;
 }
@@ -218,7 +217,7 @@ body {
 
 /* Cake */
 .cake-wrapper {
-    margin: 40px 0;
+    margin: 50px 0 40px 0;
     display: flex;
     justify-content: center;
     animation: cakeBounce 2s ease-in-out infinite;
@@ -239,7 +238,7 @@ body {
 }
 
 .layer-1 {
-    background: linear-gradient(135deg, #ff69b4, #dc60a2);
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
     bottom: 60px;
     box-shadow: 0 8px 15px rgba(255, 105, 180, 0.4);
 }
@@ -385,60 +384,180 @@ body {
     }
 }
 
-/* Responsive Design */
+/* ============================================
+   TABLET RESPONSIVE (768px and below)
+   ============================================ */
 @media (max-width: 768px) {
     .card {
-        padding: 30px;
+        padding: 35px 25px;
     }
 
     .main-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .name-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin: 10px 0 35px 0;
     }
 
     .message-text {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .celebrate-btn {
-        padding: 12px 30px;
+        padding: 13px 35px;
         font-size: 1rem;
+    }
+
+    .top-decoration,
+    .bottom-decoration {
+        font-size: 2rem;
     }
 }
 
+/* ============================================
+   MOBILE RESPONSIVE (480px and below)
+   ============================================ */
 @media (max-width: 480px) {
     .card {
-        padding: 20px;
+        padding: 20px 15px;
         border-radius: 20px;
         margin: 20px auto;
     }
 
+    /* FIX: Reduce main title */
     .main-title {
         font-size: 2rem;
+        margin: 15px 0;
+        letter-spacing: 1px;
     }
 
+    /* FIX: Significantly reduce name title size and increase margin below */
     .name-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        color: #d81b60;
+        margin: 5px 0 50px 0;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    /* FIX: Increase top margin of cake wrapper to prevent collision */
+    .cake-wrapper {
+        margin: 30px 0 30px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* FIX: Reduce cake size on mobile */
+    .cake {
+        position: relative;
+        width: 90px;
+        height: 75px;
+    }
+
+    .cake-layer {
+        height: 23px;
+    }
+
+    /* FIX: Adjust candle positioning for smaller cake */
+    .candle {
+        width: 4px;
+        height: 28px;
+        bottom: 75px;
+    }
+
+    .candle-1 { left: 26px; }
+    .candle-2 { left: 44px; }
+    .candle-3 { right: 26px; }
+
+    .flame {
+        width: 6px;
+        height: 12px;
     }
 
     .message-text {
         font-size: 0.95rem;
-    }
-
-    .cake {
-        width: 100px;
-        height: 80px;
-    }
-
-    .cake-layer {
-        height: 25px;
+        line-height: 1.6;
     }
 
     .celebrate-btn {
-        padding: 10px 25px;
+        padding: 11px 28px;
         font-size: 0.95rem;
+        margin: 15px 0;
+    }
+
+    .top-decoration,
+    .bottom-decoration {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+
+    .icon {
+        margin: 0 10px;
+    }
+
+    .floating-elements {
+        height: 60px;
+        margin: 15px 0;
+    }
+
+    .balloon {
+        font-size: 1.8rem;
+    }
+
+    .message {
+        margin: 25px 0;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL MOBILE (320px and below)
+   ============================================ */
+@media (max-width: 320px) {
+    .card {
+        padding: 15px 12px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .name-title {
+        font-size: 1.1rem;
+        margin: 5px 0 45px 0;
+    }
+
+    .cake-wrapper {
+        margin: 25px 0;
+    }
+
+    .cake {
+        width: 75px;
+        height: 60px;
+    }
+
+    .cake-layer {
+        height: 20px;
+    }
+
+    .candle {
+        width: 3px;
+        height: 24px;
+        bottom: 60px;
+    }
+
+    .candle-1 { left: 20px; }
+    .candle-2 { left: 36px; }
+    .candle-3 { right: 20px; }
+
+    .message-text {
+        font-size: 0.9rem;
+    }
+
+    .celebrate-btn {
+        padding: 9px 20px;
+        font-size: 0.85rem;
     }
 }
